@@ -1,0 +1,27 @@
+<?php
+session_start();
+include VIEW.'header.phtml'?>
+<div>
+<?php
+echo $_SESSION['Name'], ' email: ', $_SESSION['Email'];
+?>
+<h1> List of Students</h1>
+<?php
+if(array_key_exists('students',$this->view_data)){
+   // print_r($this->view_data);
+   $table = '<table border=1>';
+    foreach($this->view_data['students'] as $s){
+        //$table .= '<tr><td>'.$s[0].'</td><td>'.$s[1].'</td></tr>';
+        $s1 = explode (',',$s);
+        $table .='<tr>';
+        foreach($s1 as $s2){
+            $table .= '<td>'.$s2.'</td>';
+        }
+        $table .='</tr>';
+    }
+    $table .= '</tabel>';
+    echo $table;
+}
+?>
+</div>
+<?php include VIEW.'footer.phtml' ?>

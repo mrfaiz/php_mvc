@@ -1,0 +1,10 @@
+<?php
+session_start();
+include VIEW.'header.phtml'?>
+<div>
+<?php
+echo $_SESSION['Name'], ' email: ', $_SESSION['Email'];
+?>
+<h1> This is Country page</h1>
+</div>
+<?php include VIEW.'footer.phtml' ?>

@@ -1,0 +1,12 @@
+<?php
+session_start();
+include VIEW.'header.phtml'?>
+<div>
+<?php
+$_SESSION['Name'] = "Faiz";
+$_SESSION['Email'] = "faiz@gmail.com"; 
+?>
+
+<h1> This is Contact page</h1>
+</div>
+<?php include VIEW.'footer.phtml' ?>

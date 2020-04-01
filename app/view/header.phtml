@@ -1,0 +1,16 @@
+<?php $aciton =  $this->getAction();?>
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset = "UTF-8">
+  <link href="/css/style.css" media="all" rel="stylesheet"/>
+  <title><?= isset($this->page_title)? $this->page_title : 'No Title!'; ?> </title>
+  <script src="/js/test.js" type ="text/javascript"></script>
+ </head>
+<boddy>
+ <div  class="topnav">
+  <a <?php echo ($aciton=='home'? 'class=active' :'') ?> href="/home/index">Home</a>
+  <a <?php echo ($aciton=='contact'? 'class=active' :'') ?> href="/home/contact">Contact</a>
+  <a <?php echo ($aciton=='country'? 'class=active' :'') ?> href="/country/index">Country</a>
+  <a <?php echo ($aciton=='student'? 'class=active' :'') ?> href="/student/index">Students</a>
+ </div>
